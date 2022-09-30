@@ -40,7 +40,6 @@ function boards_reload() {
     }
 }
 function view_contents(index) {
-    debugger;
     boards.hits[index]++;
     displayOn("#w_contents");
     var st1 =
