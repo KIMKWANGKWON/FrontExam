@@ -1,0 +1,135 @@
+
+#board,#notice,#question,#writing,#w_ing {
+    display : none;
+}
+#ground {
+    background-image : url('bg.jpg');
+    background-size : cover;
+}
+#abc {
+    background-color : rgb(34,37,41);
+    background-size : cover;
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    /* 숨기기 */
+    z-index: -1;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    z-index: 1000;
+    transition: all .5s;
+}
+
+.window {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    /* 임시 지정 */
+    width: 400px;
+    height: 40vh;
+    border-radius: 20px;
+
+    /* 초기에 약간 아래에 배치 */
+    transform: translate(-50%, -40%);
+}
+
+.show .popup {
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+}
+.sub_news,
+.sub_news th,
+.sub_news td {
+    border: 0
+}
+
+.sub_news a {
+    color: white;
+    text-decoration: none
+}
+
+.sub_news {
+    width: 100%;
+    border-bottom: 1px solid #999;
+    color: #666;
+    font-size: 16px;
+    table-layout: fixed
+}
+
+.sub_news caption {
+    display: none
+}
+
+.sub_news th {
+    padding: 5px 0 6px;
+    border-top: solid 1px #999;
+    border-bottom: solid 1px #b2b2b2;
+    background-color: #f1f1f4;
+    color: #333;
+    font-weight: bold;
+    line-height: 20px;
+    vertical-align: top
+}
+
+.sub_news td {
+    padding: 8px 0 9px;
+    border-bottom: solid 1px #d2d2d2;
+    text-align: center;
+    line-height: 18px;
+}
+
+.sub_news .date,
+.sub_news .hit {
+    padding: 0;
+    font-family: Tahoma;
+    font-size: 11px;
+    line-height: normal
+}
+
+.sub_news .title {
+    text-align: left;
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+.sub_news .title .pic,
+.sub_news .title .new {
+    margin: 0 0 2px;
+    vertical-align: middle
+}
+
+.sub_news .title a.comment {
+    padding: 0;
+    background: none;
+    color: #f00;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.sub_news tr.reply .title a {
+    padding-left: 16px;
+    background: url(첨부파일/ic_reply.png) 0 1px no-repeat
+}
