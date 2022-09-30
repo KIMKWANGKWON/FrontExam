@@ -107,7 +107,7 @@
             <h3 class="float-md-start mb-0 fw-bold py-1 px-0">소통해요</h3>
           </a>
           <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a href="javascript:displayOn('#board'); javascript:active(0);" class="nav-link fw-bold py-1 px-0"
+            <a href="javascript:displayOn('#board'); javascript:active(0); javascript:boards_reload();" class="nav-link fw-bold py-1 px-0"
               aria-current="page">자유게시판</a>
             <a href="javascript:displayOn('#notice'); javascript:active(1);" class="nav-link fw-bold py-1 px-0">공지사항</a>
             <a href="javascript:displayOn('#question'); javascript:active(2);" class="nav-link fw-bold py-1 px-0">문의</a>
@@ -218,6 +218,8 @@
             onclick="alert('문의를 성공적으로 전송했습니다.');displayOn('#main'); unactive(); refresh()">보내기</button>
           <p class="mt-5 mb-3 text-muted">rlarhkdrnjs02@naver.com</p>
           </form>
+        </div>
+        <div id="w_contents">
         </div>
         <!-- <div id="writing">
           <input type="text" id="w_title" placeholder="제목을 입력해주세요."></text><br>

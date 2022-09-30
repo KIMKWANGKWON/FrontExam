@@ -1,6 +1,9 @@
 
-#board,#notice,#question,#writing,#w_ing {
+#contents > div {
     display : none;
+}
+#contents > #main {
+    display : block;
 }
 #ground {
     background-image : url('bg.jpg');
