@@ -150,32 +150,34 @@
           <p><b>글이 없습니다.</b></p>
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
             integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-          <div id="card" class="container">
-            <br />
-            <div class="row justify-content-center">
-              <div class="col-12 col-md-10 col-lg-8">
-                <form id="noneborder"class="card card-sm">
-                  <div id = "card-inner" class="card-body row no-gutters align-items-center">
-                    <div class="col-auto">
-                      <i class="fas fa-search h4 text-body"></i>
+          <input type="button" class="btn btn-lg btn-secondary fw-bold border-white bg-white" value="글쓰기"
+            onclick="displayOn('#w_ing')">
+            <div id="card" class="container">
+              <br />
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                  <form id="noneborder" class="card card-sm">
+                    <div id="card-inner" class="card-body row no-gutters align-items-center">
+                      <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                      </div>
+                      <!--end of col-->
+                      <div class="col">
+                        <input class="form-control form-control-lg form-control-borderless" type="search"
+                          placeholder="제목을 검색하세요.">
+                      </div>
+                      <!--end of col-->
+                      <div class="col-auto">
+                        <button class="btn btn-lg btn-secondary fw-bold border-white bg-white"
+                          type="submit">Search</button>
+                      </div>
+                      <!--end of col-->
                     </div>
-                    <!--end of col-->
-                    <div class="col">
-                      <input class="form-control form-control-lg form-control-borderless" type="search"
-                        placeholder="제목을 검색하세요.">
-                    </div>
-                    <!--end of col-->
-                    <div class="col-auto">
-                      <button class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="submit">Search</button>
-                    </div>
-                    <!--end of col-->
-                  </div>
-                </form>
+                  </form>
+                </div>
+                <!--end of col-->
               </div>
-              <!--end of col-->
             </div>
-          </div>
-          <input type="button" class="btn btn-lg btn-secondary fw-bold border-white bg-white"value="글쓰기" onclick="displayOn('#w_ing')">
         </div>
         <div id="notice">
           <table class="sub_news" border="1" cellspacing="0" summary="게시판의 글제목 리스트">
@@ -219,34 +221,34 @@
         </div>
         <div id="w_ing">
           <form></form>
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput">
-            <label for="floatingInput">제목</label>
-          </div>
-          <div class="form-floating">
-            <textarea class="form-control" id="floatingPassword"></textarea>
-            <label for="floatingPassword">내용</label>
-          </div>
-          <button class="w-100 btn btn-lg btn-secondary" type="submit"
-            onclick="displayOn('#board'); boards.insert(); active('0');">작성완료</button>
-          <p class="mt-5 mb-3 text-muted">rlarhkdrnjs02@naver.com</p>
-          <script>
-          </script>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput">
+              <label for="floatingInput">제목</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" id="floatingPassword"></textarea>
+              <label for="floatingPassword">내용</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-secondary" type="submit"
+              onclick="displayOn('#board'); boards.insert(); active('0');">작성완료</button>
+            <p class="mt-5 mb-3 text-muted">rlarhkdrnjs02@naver.com</p>
+            <script>
+            </script>
           </form>
         </div>
         <div id="question">
           <form></form>
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput">
-            <label for="floatingInput">제목</label>
-          </div>
-          <div class="form-floating">
-            <textarea class="form-control" id="floatingPassword"></textarea>
-            <label for="floatingPassword">내용</label>
-          </div>
-          <button class="w-100 btn btn-lg btn-secondary" type="submit"
-            onclick="alert('문의를 성공적으로 전송했습니다.');displayOn('#main'); unactive(); refresh()">보내기</button>
-          <p class="mt-5 mb-3 text-muted">rlarhkdrnjs02@naver.com</p>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput">
+              <label for="floatingInput">제목</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" id="floatingPassword"></textarea>
+              <label for="floatingPassword">내용</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-secondary" type="submit"
+              onclick="alert('문의를 성공적으로 전송했습니다.');displayOn('#main'); unactive(); refresh()">보내기</button>
+            <p class="mt-5 mb-3 text-muted">rlarhkdrnjs02@naver.com</p>
           </form>
         </div>
         <div id="w_contents">
@@ -261,7 +263,9 @@
         <p><audio controls src="https://www.youtube.com/embed/1OZDaRhHHyM" type="audio/mpeg"></audio></p>
       </footer>
     </div>
+    <div id="test">
 
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

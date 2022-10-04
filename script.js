@@ -21,7 +21,7 @@ boards = {
             st1 += ("<tr><td class='title'><a href='javascript:view_contents(" + i + ")'>" + boards.title[i] + "</a></td><td class='name'>김광권</td><td class='date'>" + today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate() + "</td><td class='hit'>" + boards.hits[i] + "</td></tr>");
         }
         target.innerHTML = "<table class='sub_news' border='1' cellspacing='0' summary='게시판의 글제목 리스트'><caption>게시판 리스트</caption><colgroup><col><col width='110'><col width='100'><col width='80'></colgroup><thead><tr><th scope='col'>제목</th><th scope='col'>글쓴이</th><th scope='col'>날짜</th><th scope='col'>조회수</th></tr></thead><tbody>"
-            + st1 + '</tbody></table><input type="button" value="글쓰기" onclick="w_ing_on()">'
+            + st1 + '</tbody></table><input type="button" value="글쓰기" onclick="w_ing_on()">' + '<div id="card" class="container"><br /><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><form id="noneborder" class="card card-sm"><div id="card-inner" class="card-body row no-gutters align-items-center"><div class="col-auto"><i class="fas fa-search h4 text-body"></i></div><div class="col"><input class="form-control form-control-lg form-control-borderless" type="search"placeholder="제목을 검색하세요."></div><div class="col-auto"><button class="btn btn-lg btn-secondary fw-bold border-white bg-white"type="submit">Search</button></div></div></form></div></div></div>';
     }
 }
 function boards_reload() {
@@ -36,9 +36,11 @@ function boards_reload() {
             st1 += ("<tr><td class='title'><a href='javascript:view_contents(" + i + ")'>" + boards.title[i] + "</a></td><td class='name'>김광권</td><td class='date'>" + today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate() + "</td><td class='hit'>" + boards.hits[i] + "</td></tr>");
         }
         target.innerHTML = "<table class='sub_news' border='1' cellspacing='0' summary='게시판의 글제목 리스트'><caption>게시판 리스트</caption><colgroup><col><col width='110'><col width='100'><col width='80'></colgroup><thead><tr><th scope='col'>제목</th><th scope='col'>글쓴이</th><th scope='col'>날짜</th><th scope='col'>조회수</th></tr></thead><tbody>"
-            + st1 + '</tbody></table><input type="button" value="글쓰기" onclick="w_ing_on()">'
+            + st1 + '</tbody></table><input type="button" value="글쓰기" onclick="w_ing_on()">' + '<div id="card" class="container"><br /><div class="row justify-content-center"><div class="col-12 col-md-10 col-lg-8"><form id="noneborder" class="card card-sm"><div id="card-inner" class="card-body row no-gutters align-items-center"><div class="col-auto"><i class="fas fa-search h4 text-body"></i></div><div class="col"><input class="form-control form-control-lg form-control-borderless" type="search"placeholder="제목을 검색하세요."></div><div class="col-auto"><button class="btn btn-lg btn-secondary fw-bold border-white bg-white"type="submit">Search</button></div></div></form></div></div></div>';
+
     }
 }
+'<div id="card" class="container"><br /><div class="row justify-content-center">div class="col-12 col-md-10 col-lg-8"><form id="noneborder" class="card card-sm"><div id="card-inner" class="card-body row no-gutters align-items-center"><div class="col-auto"><i class="fas fa-search h4 text-body"></i></div><div class="col"><input class="form-control form-control-lg form-control-borderless" type="search"placeholder="제목을 검색하세요."></div><div class="col-auto"><button class="btn btn-lg btn-secondary fw-bold border-white bg-white"type="submit">Search</button></div></div></form></div></div></div>'
 function view_contents(index) {
     boards.hits[index]++;
     displayOn("#w_contents");
